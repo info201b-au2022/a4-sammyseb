@@ -32,18 +32,18 @@ In the summary, I decided it was a good Idea to find information that would prov
 ```
 
 In the past 50 years, the jail population has nearly quadrupled, increasing by more than 400%. As shown by the graph beginning in 1970, the number of convicts has gradually increased at a rapid rate. What factors contribute to the rate of incarceration rapid increase? What role do congressional crimes acts play in this circumstance?
-<!-- ## Growth of Prison Population by State -->
+## Growth of Prison Population by State
 
-<!-- ```{r, echo=FALSE, warning=FALSE, message=TRUE, error=TRUE} -->
-<!--  plot_jail_pop_by_states -->
-<!-- ``` -->
+```{r, echo=FALSE, warning=FALSE, message=TRUE, error=TRUE}
+ plot_jail_pop_by_states
+```
 
-<!-- ## inequality comparision -->
+## inequality comparision
 
-<!-- ```{r, echo=FALSE, warning=FALSE, message=TRUE, error=TRUE} -->
-<!--  over_Time -->
-<!-- ``` -->
-<!-- Even though 13.6% of the U.S. population is black, they make up 38% of the prison population. The data shown above demonstrates that the black incarceration rate is significantly greater than that of whites. What factors contribute to the jail system's racial disparity? Can we do anything to improve the situation? -->
+```{r, echo=FALSE, warning=FALSE, message=TRUE, error=TRUE}
+ over_Time
+```
+Even though 13.6% of the U.S. population is black, they make up 38% of the prison population. The data shown above demonstrates that the black incarceration rate is significantly greater than that of whites. What factors contribute to the jail system's racial disparity? Can we do anything to improve the situation?
 ## map
 
 ```{r, echo=FALSE, warning=FALSE, message=TRUE, error=TRUE}
