@@ -6,7 +6,7 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
-chooseCRANmirror(graphics = FALSE, ind = 1)
+
 knitr::opts_chunk$set(echo = TRUE)
 source("../source/a4-helpers.R")
 source("../source/analysis.R")
@@ -35,21 +35,25 @@ In the past 50 years, the jail population has nearly quadrupled, increasing by m
 ## Growth of Prison Population by State
 
 ```{r, echo=FALSE, warning=FALSE, message=TRUE, error=TRUE}
- plot_jail_pop_by_states
+task
 ```
-
-## inequality comparision
+We can see a noticable change on the states from the chart. California has the highest incarceration rate, followed by Washington and Oregon. What is the reason for these differences we see on the chart and does state laws affect the outcomes of U.S prison syatem?
+## inequality chart
 
 ```{r, echo=FALSE, warning=FALSE, message=TRUE, error=TRUE}
- over_Time
+determine
 ```
 Even though 13.6% of the U.S. population is black, they make up 38% of the prison population. The data shown above demonstrates that the black incarceration rate is significantly greater than that of whites. What factors contribute to the jail system's racial disparity? Can we do anything to improve the situation?
+
 ## map
 
 ```{r, echo=FALSE, warning=FALSE, message=TRUE, error=TRUE}
  cases_Map
 ```
-Texas has one of the highest rates of incarceration. In Texas, there are around 135 000 convicts.  Dissecting the prisoner’s population by county makes it easier to understand which place has the highest incarceration rate and ask the question if it is related to the biased prison system. Do we have sufficient evidence to infer that the system is unequal based on this map?
+
+
+
+Texas has one of the highest incarceration rates in the nation. In Texas, there are approximately 135 000 prisoners. By dividing the prisoner population by county, it is easier to determine which area has the highest incarceration rate and to inquire whether this is a result of a biased prison system. Based on this map, do we have sufficient evidence to conclude that the system is unequal?
 _All the very best with your work!_
 
 
