@@ -87,7 +87,7 @@ plot_jail_pop_by_states <- function (states) {
   p <- ggplot(data = get_jail) +
   geom_col(mapping = aes(x = state , y=total_jail_pop)) +
   labs(x= "year", y = "Amount of people in jail") +
-  ggtitle(" Growth of prison population in Washington from 1970-2018")
+  ggtitle(" Growth of prison population in California, Washington and Oregon.")
   return(p)
 }
   task <- plot_jail_pop_by_states()
@@ -129,16 +129,16 @@ determine <- Over_time()
 # <a map shows potential patterns of inequality that vary geographically>
 # Your functions might go here ... <todo:  update comment>
 # See Canvas
-TX_Map <- proj %>% 
+TX_Map <- jail_info %>% 
   filter(year == max(year))
 
 county_shapes <- map_data("county") %>%
   unite(polyname, region, subregion, sep = ",") %>% 
   left_join(county.fips, by = "polyname")
 
-# map_data <- county_shapes %>% 
-#  left_join(TX_Map, by ="fips") %>% 
-#   filter(state == "TX")
+map_data <- county_shapes %>%
+ left_join(TX_Map, by ="fips") %>%
+  filter(state == "TX")
 
 #clean map
 
@@ -155,7 +155,7 @@ blank_theme <- theme_bw() +
   )
 
 #create map
-cases_Map <- ggplot(map_data) +
+cases_Map <- ggplot(data= map_data) +
   geom_polygon(
     mapping = aes(x= long, y= lat, group = group, fill = black_jail_pop),
     color="gray", size = 0.3
@@ -163,7 +163,7 @@ cases_Map <- ggplot(map_data) +
   coord_map() +
   scale_fill_continuous(limits = c(0, max(map_data$black_jail_pop_rate)), na.value= "white", low = "yellow", high = "red") +
   blank_theme +
-  ggtitle("Black Jail Population in Alabama")
+  ggtitle("Black Jail Population in Texas")
 
 #----------------------------------------------------------------------------#
 
